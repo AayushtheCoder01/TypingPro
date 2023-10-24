@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypingPro</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+        .heading-section{
+            display: flex;
+            height: auto;
+            width: 100%;
+            padding: 5px;
+            color: #1f883d;
+            box-shadow: 1px 1px 10px rgb(217, 217, 217);
+        }
+        .header{
+            height: 100%;
+            width: 100%;
+            font-family: 'Josefin Sans', sans-serif;
+            justify-content: center;
+            font-size: 2rem;
+            text-align: center;
+            padding: 15px;
+        }
+        .main-content{
+            display: flex;
+            justify-content: center;
+            height: auto;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+        .data-card{
+            height: auto;
+            width: 60%;
+            background-color: #f6fbff;
+            padding: 1rem;
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #e4f3ff;
+        }
+        .text-box{
+            height: auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 1.6rem;
+            padding: 1rem;
+            margin: 5px;
+        }
+        .input-box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5rem;
+            padding: 2px;
+            margin: 2px;
+        }
+        input{
+            height: 2rem;
+            width: 90%;
+            border-radius: 10px;
+            padding: 5px;
+            border: 2px solid #bfdef8;
+            font-size: 1.3rem;
+            box-shadow: 1px 1px 10px rgb(209, 208, 208);
+        }
+        .button-box{
+            display: flex;
+            justify-content: center;
+            padding: 1px;
+            margin: 5px;
+        }
+        button{
+            height: 3rem;
+            width: 25%;
+            border-radius: 5px;
+            background-color: #1f883d;
+            color: white;
+            border: 0px;
+            font-size: .9rem;
+            transition: all .1s;        }
+        .reset-btn{
+            background-color: rgb(14, 105, 242);
+        }
+        button:hover{
+            scale: 1.05;
+        }
+        button:active{
+            scale: .95;
+            border: 2px solid rgb(188, 188, 188);
+        }
+        .score{
+            margin: 5px;
+            text-align: center;
+        }
+        p{
+            margin: 5px;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="heading-section">
+        <div class="header">
+            <h1 class="title">TypingPro^</h1>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="data-card">
+            <div class="text-box">
+
+            </div>
+            <div class="input-box">
+                <input type="password">
+            </div>
+            <div class="button-box">
+                <button onclick="submit_function()" class="submit-btn">Submit</button>
+            </div>
+        </div>
+        <div class="answer-card data-card">
+            <div class="score">
+                <h2 id="score">Score: </h2>
+            </div>
+            <div class="answer-text-box text-box">
+
+            </div>
+            <div class="button-box">
+                <button onclick="reset_all()" class="reset-btn">Reset</button>
+            </div>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
